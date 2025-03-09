@@ -56,6 +56,7 @@ The project is a code written in C++ language which contains an arcade consistin
 - Moving Ball (development [.exe/.cpp] )
 - Windows Screen Saver [.exe/.cpp] 
 
-\newline
-$$ - THE \space \space END- $$
+$\newline$
+
+$$ - THE \space \space END - $$
 
