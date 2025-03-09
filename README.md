@@ -50,13 +50,8 @@ The project is a code written in C++ language which contains an arcade consistin
 
 
 
-Modify the part below
+# Additional minigames
 
-# SAHAS-Arcade
-This repository contains a group developed using C,C++ and library graphics.h
-
-It contains 5 games
-- Air_Hockey, Snake, 2048 (SAHASArcade [.exe/.cpp] )
 - Soccer Stars (Soccer_stars_combined [.exe/.cpp] )
 - Moving Ball (development [.exe/.cpp] )
 
