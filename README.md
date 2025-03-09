@@ -1,6 +1,6 @@
 # SAHAS Arcade
 
-This Project done by members:
+This Project is done by members:
 - Aditya Dhananjay Singh
 - Atharva Atul Penkar
 - Harshil Singh
