@@ -54,10 +54,7 @@ The project is a code written in C++ language which contains an arcade consistin
 
 - Soccer Stars (Soccer_stars_combined [.exe/.cpp] )
 - Moving Ball (development [.exe/.cpp] )
-
-And a variation of the Soccer_stars game which is the "Windows Screen Saver.exe" which resembles the Bubbles screen saver in Windows.
-
-.exe files are attached so as to allow them to play the game without having to install devC++ and graphics.h on their device.
+- Windows Screen Saver [.exe/.cpp] 
 
 -- THE END--
 
