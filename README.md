@@ -52,8 +52,8 @@ The project is a code written in C++ language which contains an arcade consistin
 
 # Additional minigames
 
+- Moving Ball [.exe/.cpp] 
 - Soccer Stars (Soccer_stars_combined [.exe/.cpp] )
-- Moving Ball (development [.exe/.cpp] )
 - Windows Screen Saver [.exe/.cpp] 
 
 $\newline$
