@@ -91,6 +91,7 @@ class Coin{
 		static const int number=10;  // # of coins in 2*screen range
 		static const int colors=4;
 		const int radius=20;
+		const int cycle=2;           // Time (in sec) after which default coins change colour
 		Point coin[number]; 	 	 // center of coins
 		int color[number];       	 // color of coin[i]
 		int COLOR[colors];       	 // color_id of color[j] w.r.t graphics.h
@@ -133,6 +134,7 @@ class Coin{
 				if(coin[i].x<=-radius){ // restore coins
 					newcoin(i);
 				}
+				if(value[color[i]]==1) color[i]=(Time/cycle)&1;
 			}
 		}
 		void eat(){
@@ -157,11 +159,11 @@ class Coin{
 		// Initialize coins
 		Coin(){
 			probability[0]=1;
-			probability[1]=2;
+			probability[1]=1;
 			probability[2]=10;
 			probability[3]=11; // If P[j]|rand(1,100) choose j, otherwise go up
 			
-			COLOR[0]=14; COLOR[1]=13; COLOR[2]=4; COLOR[3]=0;
+			COLOR[0]=13; COLOR[1]=14; COLOR[2]=4; COLOR[3]=0;
 			value[0]=value[1]=1; value[2]=5; value[3]=-1;
 			sound[0]=sound[1]={700,100}; sound[2]={900,200}; sound[3]={400,400};
 
