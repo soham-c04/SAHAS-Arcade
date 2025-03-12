@@ -1,0 +1,40 @@
+# Project: SAHAS_arcade
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = 2048.o Air_Hockey.o Snake.o Screen.o SAHAS_Arcade.o
+LINKOBJ  = 2048.o Air_Hockey.o Snake.o Screen.o SAHAS_Arcade.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -L"C:/Users/SOHAM/Desktop/Projects/SAHAS_Arcade/Graphics_Header_File_Setup" -static-libgcc -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32 -m32
+INCS     = 
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -I"C:/Users/SOHAM/Desktop/Projects/SAHAS_Arcade/Graphics_Header_File_Setup"
+BIN      = SAHAS_arcade.exe
+CXXFLAGS = $(CXXINCS) -std=gnu++11 -m32 -Wall -Wextra
+CFLAGS   = $(INCS) -std=gnu++11 -m32 -Wall -Wextra
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+2048.o: 2048.cpp
+	$(CPP) -c 2048.cpp -o 2048.o $(CXXFLAGS)
+
+Air_Hockey.o: Air_Hockey.cpp
+	$(CPP) -c Air_Hockey.cpp -o Air_Hockey.o $(CXXFLAGS)
+
+Snake.o: Snake.cpp
+	$(CPP) -c Snake.cpp -o Snake.o $(CXXFLAGS)
+
+Screen.o: Screen.cpp
+	$(CPP) -c Screen.cpp -o Screen.o $(CXXFLAGS)
+
+SAHAS_Arcade.o: SAHAS_Arcade.cpp
+	$(CPP) -c SAHAS_Arcade.cpp -o SAHAS_Arcade.o $(CXXFLAGS)
