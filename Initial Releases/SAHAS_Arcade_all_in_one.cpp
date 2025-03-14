@@ -1427,7 +1427,7 @@ int main()
 				break;
 			case 2:
 				readimagefile("resources/main_menu.jpg",0,0,width,height);
-				readimagefile("resources/icon_2048.jpg",825,90,975,240);
+                readimagefile("resources/icon_2048.jpg",825,90,975,240);
 				readimagefile("resources/icon_Air_Hockey.jpg",800,260,1000,460);
 				readimagefile("resources/icon_Snake_Game.jpg",825,480,975,630);
 				break;

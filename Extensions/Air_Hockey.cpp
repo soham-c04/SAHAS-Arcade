@@ -89,10 +89,7 @@ class Ball{
 		void boundary();				// Checks for boundary collisions and goals
 		void collision(Striker s){
 			if(pow(s.x-x,2)+pow(s.y-y,2)<=pow(s.radius+radius,2)){
-				double theta=deg(atan((s.y-y)*1.0/(x-s.x)));
-				if(y==s.y) theta=(s.x>x)*(180);
-				else if(x==s.x) theta=90+(y>s.y)*(180);
-				else if(s.x>x) theta+=180.0;
+				double theta=deg(atan2(s.y-y,x-s.x));
 
 				double anglee=angle;
 				angle=fmod(fmod(180.0+2*theta-angle,360.0)+360.0,360.0);
@@ -162,10 +159,9 @@ class Goal{
 }goal;
 
 void Full_Reset(){ // Restarts whole game
-	X1=X+goal.width; Y1=Y;
-	X2=width-goal.width,Y2=height;
 	reset();
-	goal.goal_1=goal.goal_2=0;
+	goal.goal_1=0;
+	goal.goal_2=0;
 	Time=0;
 }
 
@@ -184,7 +180,6 @@ void Ball::move(bool Goaling){
 		
 		boundary();
 	}
-
 }
 
 void Ball::boundary(){
@@ -221,7 +216,6 @@ void settings(){
 	setfillstyle(SOLID_FILL,1);//color choice 1
 	circle(width/4+75,height/2+25,striker1.radius*2.5);//prints first circle
 	floodfill(width/4+75,height/2+25,WHITE);//fills circle 1 with first color choice
-	//while(!GetAsyncKeyState('X')) delay(10);
 	circle(3*width/4-75,height/2+25,striker1.radius*2.5);//prints second circle
 	setfillstyle(SOLID_FILL,3);//color choice 2
 	floodfill(3*width/4-75,height/2+25,WHITE);//fills circle 2 with second color choice
@@ -394,7 +388,7 @@ void pause_screen(int option){
 	page=1-page;
 }
 
-int pause(){
+bool pause(){
 	int option=1;
 	while(true){
 		if(GetAsyncKeyState(VK_UP)){
@@ -408,27 +402,23 @@ int pause(){
 		else if(GetAsyncKeyState(VK_RETURN)){
 			switch(option){
 				case 1:
-					return 1;
-					break;
+					return true;
 				case 2:
 					Full_Reset();
-					return 1;
-					break;
+					return true;
 				case 3:
 					page=1-page;
 					settings();
-					return 1;
-					break;
+					return true;
 				case 4:
-					return 0;
-					break;
+					return false;
 				default:
-					return 1;
+					return true;
 			}
 		}
 		else if(GetAsyncKeyState(VK_ESCAPE)){	
 			while(GetAsyncKeyState(VK_ESCAPE));
-			return 1;
+			return true;
 		}
 		pause_screen(option);
 		delay(100);
@@ -457,8 +447,8 @@ void game(){
 		
 		if(GetAsyncKeyState(VK_ESCAPE)){
 			while(GetAsyncKeyState(VK_ESCAPE));
-			int run_game=pause();
-			if(run_game==0) break;
+			bool run_game=pause();
+			if(!run_game) break;
 		}
 		delay(10);
 	}
@@ -468,6 +458,8 @@ void start_AH(){
 	height-=20;
 	width-=10;
 	
+	X1=X+goal.width; 	 Y1=Y;
+	X2=width-goal.width; Y2=height;
 	Full_Reset();
 	
 	cleardevice();
