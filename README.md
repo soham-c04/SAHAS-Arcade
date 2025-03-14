@@ -31,9 +31,9 @@ The project is a code written in C++ language which contains an arcade consistin
 
 ## Gameplay
 
-<img src="https://github.com/user-attachments/assets/5229cffe-dce4-4a8b-be02-9fc8741b32c4" width="500">    <img src="https://github.com/user-attachments/assets/75c05971-936e-40af-bf38-441a634a83bb" width="500">
+<img src="https://github.com/user-attachments/assets/5229cffe-dce4-4a8b-be02-9fc8741b32c4" width="400"> <img src="https://github.com/user-attachments/assets/75c05971-936e-40af-bf38-441a634a83bb" width="400">
 
-<img src="https://github.com/user-attachments/assets/307368e5-5f64-438d-a2f9-b605cc8a2f92" width="500">    <img src="https://github.com/user-attachments/assets/c451eed5-7c43-417c-97f5-982b47190521" width="500">
+<img src="https://github.com/user-attachments/assets/307368e5-5f64-438d-a2f9-b605cc8a2f92" width="400"> <img src="https://github.com/user-attachments/assets/c451eed5-7c43-417c-97f5-982b47190521" width="400">
 
 
 $\newline$
