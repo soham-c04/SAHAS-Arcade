@@ -19,6 +19,7 @@ Double Buffering to reduce flickering when printing objects.
 
 Division of one main.cpp file into multiple .h and .cpp files for each individual game.<br>
 Air_Hockey is further divided into multiple .h and .cpp for online and offline versions of the game.
+<br>
 
 ### Air Hockey:
 - **Object-Oriented Programming**
@@ -53,6 +54,7 @@ Air_Hockey is further divided into multiple .h and .cpp for online and offline v
 - Checking collision of snake with boundary
 - Counting and increasing length of snake when it eats food
 - Exit to main menu functionality
+<br>
 
 ## Gameplay
 
