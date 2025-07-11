@@ -1,7 +1,5 @@
-#include <graphics.h>
-#include <time.h>
-#include "Screen.h"
 #include "Snake.h"
+#include "Screen.h"
 using namespace std;
 
 int d=1;//direction of snake

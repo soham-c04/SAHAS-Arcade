@@ -1,7 +1,5 @@
-#include <graphics.h>
-#include <time.h>
-#include "Screen.h"
 #include "2048.h"
+#include "Screen.h"
 using namespace std;
 
 int change=0,score=0,n=4;
