@@ -7,3 +7,4 @@
 2. Create a new Project and add the .cpp and .h files under the project present [here](https://github.com/soham-c04/SAHAS-Arcade/tree/main/Extensions).
 3. Set the Project Options as per attachment.
 4. You might need to turn-off Windows Defender temporarily if it says "Virus Detected" or "We stopped a virus".
+5. Make sure to download the resources folder and it should be in the same path as the .exe file.
