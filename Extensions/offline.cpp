@@ -179,6 +179,7 @@ void Ball::boundary(){
 }
 
 void settings_off(){
+	setactivepage(page);
 	setvisualpage(page);
 	cleardevice();
 	setcolor(1);
